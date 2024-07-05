@@ -47,4 +47,19 @@ This is a simple template of C++ CLI application using C++17, Conan, and CMake.
    ```
 
 ### Note
-Ensure you are using macOS Sonoma 14.5 and have the necessary build tools installed.
+
+For easier rebuild, you can create `Makefile` in the project root directory with the following content:
+
+```makefile
+clean :
+	rm -rf build
+
+rebuild : clean
+	mkdir build && \
+	cd build && \
+	conan install .. --profile=default --build=missing && \
+	cmake .. -DCMAKE_TOOLCHAIN_FILE=Release/generators/conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release && \
+	cmake --build .
+```
+
+Then, rebuild with `make rebuild`.
