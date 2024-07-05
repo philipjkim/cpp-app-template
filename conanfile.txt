@@ -1,0 +1,7 @@
+[requires]
+boost/1.85.0
+spdlog/1.14.1
+gtest/1.14.0
+
+[generators]
+cmake
