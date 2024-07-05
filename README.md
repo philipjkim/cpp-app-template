@@ -1,6 +1,6 @@
-# simple-chat
+# Simple Chat
 
-This is a simple chat application template using C++17, Conan, and CMake.
+This is a simple chat application using C++17, Conan, and CMake.
 
 ## Dependencies
 - Boost 1.85.0
@@ -15,29 +15,33 @@ This is a simple chat application template using C++17, Conan, and CMake.
 
 ### Steps
 
-1. Install the dependencies using Conan:
-   ```sh
-   conan install . --build=missing
-   ```
-
-2. Create a build directory and run CMake:
+1. Create a build directory:
    ```sh
    mkdir build
    cd build
-   cmake ..
    ```
 
-3. Build the project:
+2. Install the dependencies using Conan:
+   ```sh
+   conan install .. --profile=default --build=missing
+   ```
+
+3. Run CMake to generate the build files, specifying the correct path to the Conan toolchain file and the build type:
+   ```sh
+   cmake .. -DCMAKE_TOOLCHAIN_FILE=Release/generators/conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release
+   ```
+
+4. Build the project:
    ```sh
    cmake --build .
    ```
 
-4. Run the application:
+5. Run the application:
    ```sh
-   ./bin/my_cpp_project
+   ./bin/simple-chat
    ```
 
-5. Run the tests:
+6. Run the tests:
    ```sh
    ctest
    ```
