@@ -1,6 +1,6 @@
-# Simple Chat
+# cpp-app-template
 
-This is a simple chat application using C++17, Conan, and CMake.
+This is a simple template of C++ CLI application using C++17, Conan, and CMake.
 
 ## Dependencies
 - Boost 1.85.0
@@ -38,7 +38,7 @@ This is a simple chat application using C++17, Conan, and CMake.
 
 5. Run the application:
    ```sh
-   ./bin/simple-chat
+   ./bin/cpp-app
    ```
 
 6. Run the tests:

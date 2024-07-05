@@ -1,8 +1,8 @@
 from conan import ConanFile
 from conan.tools.cmake import CMake, CMakeToolchain, CMakeDeps, cmake_layout
 
-class SimpleChatProjectConan(ConanFile):
-    name = "simple-chat"
+class CppAppProjectConan(ConanFile):
+    name = "cpp-app"
     version = "1.0"
     settings = "os", "compiler", "build_type", "arch"
     requires = [
@@ -31,4 +31,4 @@ class SimpleChatProjectConan(ConanFile):
         cmake.install()
 
     def package_info(self):
-        self.cpp_info.libs = ["simple_chat"]
+        self.cpp_info.libs = ["cpp-app"]

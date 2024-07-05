@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(simple-chat VERSION 1.0.0 LANGUAGES CXX)
+project(cpp-app VERSION 1.0.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -16,8 +16,8 @@ find_package(Boost REQUIRED)
 find_package(spdlog REQUIRED)
 find_package(GTest REQUIRED)
 
-add_executable(simple-chat src/main.cpp)
-target_link_libraries(simple-chat Boost::headers spdlog::spdlog)
+add_executable(cpp-app src/main.cpp)
+target_link_libraries(cpp-app Boost::headers spdlog::spdlog)
 
 # TODO: Uncomment the following lines to enable testing
 #enable_testing()
